@@ -1,0 +1,68 @@
+tool,time,userCmd,isGitCommand,gitCommand,isError,result,hasSolution,isSatisfy
+decision_tree,27 Mar 2016 19:48:20,"['git', 'checkout', '-b', 'test']",True,checkout,False,"Switched to a new branch 'test'
+",,
+decision_tree,27 Mar 2016 19:48:27,"['git', 'push', 'origin', 'test']",True,push,False,"To https://github.com/YihuanDong/Group-1.git
+ * [new branch]      test -> test
+",,
+decision_tree,27 Mar 2016 19:50:21,['q'],False,,,,,no
+decision_tree,27 Mar 2016 19:52:10,"['git', 'checkout', '-b', 'test']",True,checkout,False,"Switched to a new branch 'test'
+",,
+decision_tree,27 Mar 2016 19:52:15,"['git', 'push', 'origin', 'test']",True,push,True,"remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/YihuanDong/Group-1.git/'
+",False,no
+decision_tree,27 Mar 2016 19:52:33,"['git', 'push', 'origin', 'test']",True,push,False,"To https://github.com/YihuanDong/Group-1.git
+ * [new branch]      test -> test
+",,
+decision_tree,27 Mar 2016 19:53:55,"['open', '.']",False,,False,,,
+decision_tree,27 Mar 2016 19:54:55,"['git', 'status']",True,status,False,"# On branch test
+# Changes not staged for commit:
+#   (use ""git add <file>..."" to update what will be committed)
+#   (use ""git checkout -- <file>..."" to discard changes in working directory)
+#
+#	modified:   README.md
+#
+# Untracked files:
+#   (use ""git add <file>..."" to include in what will be committed)
+#
+#	1-B-decision_tree-log.csv
+no changes added to commit (use ""git add"" and/or ""git commit -a"")
+",,
+decision_tree,27 Mar 2016 19:55:04,"['git', 'add', 'README.md']",True,add,False,,,
+decision_tree,27 Mar 2016 19:55:14,"['git', 'commit', '-m', '""Member B edited"" ']",True,commit,False,"[test e25d7e5] ""Member B edited""
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+",,
+decision_tree,27 Mar 2016 19:55:24,"['git', 'push', 'origin', 'test']",True,push,True,"To https://github.com/YihuanDong/Group-1.git
+ ! [rejected]        test -> test (fetch first)
+error: failed to push some refs to 'https://github.com/YihuanDong/Group-1.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+",True,yes
+decision_tree,27 Mar 2016 19:55:46,"['git', 'pull']",True,pull,True,"From https://github.com/YihuanDong/Group-1
+   d84d7bd..29be89e  test       -> origin/test
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> test
+
+",False,yes
+decision_tree,27 Mar 2016 19:56:06,"['git', 'pull', 'origin', 'test']",True,pull,True,"From https://github.com/YihuanDong/Group-1
+ * branch            test       -> FETCH_HEAD
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+",True,yes
+decision_tree,27 Mar 2016 19:56:51,"['git', 'add', 'README.md']",True,add,False,,,
+decision_tree,27 Mar 2016 19:57:00,"['git', 'commit', '-m', '""solved conflict"" ']",True,commit,False,"[test 6ab9eab] ""solved conflict""
+",,
+decision_tree,27 Mar 2016 19:57:08,"['git', 'push', 'origin', 'test']",True,push,False,"To https://github.com/YihuanDong/Group-1.git
+   29be89e..6ab9eab  test -> test
+",,
+decision_tree,27 Mar 2016 19:57:32,['quit'],False,,,,,yes
