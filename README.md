@@ -8,6 +8,7 @@ The stars in the bracket below are placeholders for some text.
 
 <Group member B made some edits here>
 
+
 If you are **Group Member A**: Please substitute the stars in the bracket with "Group member A has edited here"
 
 If you are **Group Member B**: Please substitute the stars in the bracket with " Group member B made some edits here"
